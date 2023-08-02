@@ -1,0 +1,88 @@
+{
+	"portfolioItems": [
+		{
+			"id": "cd99ea43112949b5061d8fc726dfc07e19abd870f02f1e392a941acdfaf4ff0e",
+			"name": "perkd",
+			"homePage": {
+				"heroImage": "/images/samples/Perkd-V1.png",
+				"worksSectionImage": "",
+				"ownPageLink": ""
+			},
+			"ownPage": {
+				"heroImages": [
+					"/images/samples/Perkd-V1.png"
+				]
+			}
+		},
+		{
+			"id": "06fad5b53a84963f906ab043d808bceeed4effa0df4cd5e766eeb15e9157ade1",
+			"name": "kingCoconutWater",
+			"homePage": {
+				"heroImage": "/images/samples/King-Coconut-Water-V2A2.png",
+				"worksSectionImage": "",
+				"ownPageLink": ""
+			},
+			"ownPage": {
+				"heroImages": [
+					"/images/samples/King-Coconut-Water-V2A2.png"
+				]
+			}
+		},
+		{
+			"id": "a12dbb3da778d2d71b04c26e36c7723dc5f69d91e70182b60ccdd442e7586bfc",
+			"name": "zaleranceZlushy",
+			"homePage": {
+				"heroImage": "/images/samples/Zalerance-Zlushy.png",
+				"worksSectionImage": "",
+				"ownPageLink": ""
+			},
+			"ownPage": {
+				"heroImages": [
+					"/images/samples/Zalerance-Zlushy.png"
+				]
+			}
+		},
+		{
+			"id": "6c7f584ca0243d3849e4fa3e3fdbca2e311e9090f07d75e97a2b0f79aadcc9d1",
+			"name": "mediterraneanC",
+			"homePage": {
+				"heroImage": "/images/samples/Mediterranean-C-V4-A4.png",
+				"worksSectionImage": "",
+				"ownPageLink": ""
+			},
+			"ownPage": {
+				"heroImages": [
+					"/images/samples/Mediterranean-C-V4-A4.png"
+				]
+			}
+		},
+		{
+			"id": "5c9e0407413273d4dce136a68805caba7b968a2fca5014880bcea7de4d66c824",
+			"name": "sriracha",
+			"homePage": {
+				"heroImage": "/images/samples/sriracha-presentation-12.png",
+				"worksSectionImage": "",
+				"ownPageLink": ""
+			},
+			"ownPage": {
+				"heroImages": [
+					"/images/samples/sriracha-presentation-12.png"
+				]
+			}
+		},
+		{
+			"id": "d4f9083366ac61565a3f0dff6608d4dcd5f65fbd801672ef6637e49852435ca3",
+			"name": "zaleranceSpike",
+			"homePage": {
+				"heroImage": "/images/samples/Zalerance-SpikeZ.png",
+				"worksSectionImage": "",
+				"ownPageLink": ""
+			},
+			"ownPage": {
+				"heroImages": [
+					"/images/samples/Zalerance-SpikeZ.png"
+				]
+			}
+		}
+	]
+}

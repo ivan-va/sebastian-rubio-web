@@ -1,0 +1,36 @@
+<%- include('partials/header'); -%>
+
+<body>
+	<section class="portfolio-item-hero-section section-center" id="portfolio-item-hero">
+		<div class="portfolio-item-hero-center viewport-aware-centering">
+			<%- include('partials/heroCarousel'); -%>
+		</div>
+	</section>
+	<section class="portfolio-item-about-section section-center">
+		<div class="portfolio-item-about-center viewport-aware-centering">
+			<p class="portfolio-item-about-header font-body-norm">
+				Project: <%= projectTitle %><br>
+				Client: <%= projectClient %><br>
+				Year: <%= projectYear %>
+			</p>
+			<p class="portfolio-item-about-description font-body-italic">
+				<%= projectDescription %>
+			</p>
+			<p class="portfolio-item-about-nav-text font-body-italic">Decided yet?</p>
+			<button class="portfolio-item-about-lets-talk-btn lets-talk-btn font-btn">Let's talk</button>
+		</div>
+	</section>
+	<section class="portfolio-item-works-section section-center">
+		<div class="portfolio-item-works-center viewport-aware-centering">
+			<%- include('partials/portfolioGallery'); -%>
+		</div>
+	</section>
+	<section class="portfolio-item-reviews-section section-center">
+		<div class="portfolio-item-reviews-center viewport-aware-centering">
+			<%- include('reviews') -%>
+		</div>
+	</section>
+</body>
+<script type="module" src="../portfolioItem.js"></script>
+
+<%- include('partials/footer'); -%>
