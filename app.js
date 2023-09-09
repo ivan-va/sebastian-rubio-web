@@ -11,6 +11,8 @@ import rateLimiter from 'express-rate-limit'
 //
 import sendEmail from './controllers/sendEmail.js'
 import data from './public/data.js'
+// middleware
+import notFoundMiddleware from './middleware/notFound.js'
 
 const app = express()
 
@@ -65,31 +67,24 @@ app.get(`/`, function(req, res) {
   // so it's concieved as let
   let ejsVarsObj = populatePortfolioSection(data)
 
-  res.render(`home`, ejsVarsObj)
+  res.status(200).render(`home`, ejsVarsObj)
 });
 
 app.post(`/send`, sendEmail, function(req, res) {
-  res.render(`contactSent`, {msg: `Message sent!`})
+  res.status(200).render(
+    `message`,
+    {
+      msg: `Message sent!`,
+      icon: `fa-solid fa-envelope-circle-check`,
+      goToAddress: `/`,
+      goToAddressString: `home page`,
+    }
+  )
 })
 
 app.get(`/portfolio/:ndx`, function(req, res) {
   const {ndx} = req.params
   const {portfolioItems} = data
-  const portfolioMaxNdx = Number(process.env.PORTFOLIO_ITEMS) - 1
-  // console.log(portfolioMaxNdx, typeof portfolioMaxNdx)
-
-  const numNdx = Number(ndx)
-  // console.log(typeof numNdx, numNdx)
-  // if our :ndx is not actually a number, then return 404
-  if (Number.isNaN(numNdx)) {
-    res.status(404).json({msg: `404. The page was not found.`})
-    return
-  }
-  // if our :ndx is a number, but out of range, return 404
-  if (numNdx > portfolioMaxNdx || numNdx < 0) {
-    res.status(404).json({msg: `404. The page was not found.`})
-    return
-  }
 
   let ejsVarsObj = populatePortfolioSection(data)
 
@@ -102,12 +97,31 @@ app.get(`/portfolio/:ndx`, function(req, res) {
 })
 
 app.get(`/contact-empty`, function(req, res) {
-  res.render(`contactError`, {msg: `Not sent! Please, fill out all fields.`})
+  res.status(400).render(
+    `message`,
+    {
+      msg: `Not sent! Please, fill out all fields.`,
+      icon: `fa-solid fa-circle-exclamation`,
+      goToAddress: `/#footer-contact`,
+      goToAddressString: `contact form`,
+    }
+  )
 })
 
 app.get(`/contact-email-error`, function(req, res) {
-  res.render(`contactError`, {msg: `Not sent! Invalid email, try again.`})
+  res.status(400).render(
+    `message`,
+    {
+      msg: `Not sent! Invalid email, try again.`,
+      icon: `fa-solid fa-circle-exclamation,`,
+      goToAddress: `/#footer-contact`,
+      goToAddressString: `contact form`,
+    }
+  )
 })
+
+// error handling middleware setup
+app.use(notFoundMiddleware)
 
 let port = process.env.PORT;
 if (port == null || port == "") {
@@ -116,4 +130,4 @@ if (port == null || port == "") {
 
 app.listen(port, function() {
   console.log(`Server is running on port ${port}`)
-});
+})

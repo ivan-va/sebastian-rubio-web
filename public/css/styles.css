@@ -506,14 +506,12 @@ Project
   background: var(--primary-500);
   height: 90px;
 /*  border-bottom: 1px solid var(--primary-500);*/
-/*  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.15);*/
   display: grid;
   z-index: 20;
   border-bottom: 1px var(--accent-1) solid;
   transition: var(--transition);
 }
 .nav-center {
-/*  background: var(--primary-400);*/
   max-width: 360px;
 }
 .nav-fixed {
