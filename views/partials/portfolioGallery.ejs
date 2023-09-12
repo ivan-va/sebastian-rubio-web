@@ -1,70 +1,25 @@
 <!-- works gallery -->
 <div class="works-gallery">
+  <% for (let i=0; i<projects.length; i++) { %>
   <!-- single work -->
   <div class="work">
     <div class="work-image-container">
-      <img src="<%= workImage1 %>" alt="" class="work-photo">
+      <img src="<%= projects[i].workSectionImage %>" alt="" class="work-photo">
     </div>
     <div class="work-description-container">
-      <p class="work-name font-body-norm"><%= projectTitle1 %></p>
-      <p class="work-date font-body-norm"><%= projectYear1 %></p>
+      <p class="work-name font-body-norm"><%= projects[i].projectTitle %></p>
+      <p class="work-date font-body-norm"><%= projects[i].projectYear %></p>
     </div>
   </div>
   <!-- end of single work -->
-  <!-- single work -->
-  <div class="work">
-    <div class="work-image-container">
-      <img src="<%= workImage2 %>" alt="" class="work-photo">
-    </div>
-    <div class="work-description-container">
-      <p class="work-name font-body-norm"><%= projectTitle2 %></p>
-      <p class="work-date font-body-norm"><%= projectYear2 %></p>
-    </div>
-  </div>
-  <!-- end of single work -->
-  <!-- single work -->
-  <div class="work">
-    <div class="work-image-container">
-      <img src="<%= workImage3 %>" alt="" class="work-photo">
-    </div>
-    <div class="work-description-container">
-      <p class="work-name font-body-norm"><%= projectTitle3 %></p>
-      <p class="work-date font-body-norm"><%= projectYear3 %></p>
-    </div>
-  </div>
-  <!-- end of single work -->
-  <!-- single work -->
-  <div class="work">
-    <div class="work-image-container">
-      <img src="<%= workImage4 %>" alt="" class="work-photo">
-    </div>
-    <div class="work-description-container">
-      <p class="work-name font-body-norm"><%= projectTitle4 %></p>
-      <p class="work-date font-body-norm"><%= projectYear4 %></p>
-    </div>
-  </div>
-  <!-- end of single work -->
-  <!-- single work -->
-  <div class="work">
-    <div class="work-image-container">
-      <img src="<%= workImage5 %>" alt="" class="work-photo">
-    </div>
-    <div class="work-description-container">
-      <p class="work-name font-body-norm"><%= projectTitle5 %></p>
-      <p class="work-date font-body-norm"><%= projectYear5 %></p>
-    </div>
-  </div>
-  <!-- end of single work -->
-  <!-- single work -->
-  <div class="work">
-    <div class="work-image-container">
-      <img src="<%= workImage6 %>" alt="" class="work-photo">
-    </div>
-    <div class="work-description-container">
-      <p class="work-name font-body-norm"><%= projectTitle6 %></p>
-      <p class="work-date font-body-norm"><%= projectYear6 %></p>
-    </div>
-  </div>
-  <!-- end of single work -->
+  <% } %>
 </div>
+<style>
+  .works-gallery {
+    display: grid;
+    margin: 28px auto 0 auto;
+    grid-template-rows: repeat(<%= projects.length %>, auto);
+    row-gap: 30px;
+  }
+</style>
 <!-- end of works gallery -->

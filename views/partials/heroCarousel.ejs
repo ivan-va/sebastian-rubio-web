@@ -19,48 +19,24 @@
   </div>
   <!-- conveyor -->
   <div class="carousel-conveyor hero-carousel-conveyor">
+    <% for(let i=0; i<heroImages.length; i++) { %>
     <!-- single frame -->
     <div class="carousel-frame hero-carousel-frame">
       <div class="hero-carousel-frame-image-container">
-        <img src="/images/samples/Mediterranean-C-V4-A4.png" alt="limoncello packaging sample" class="carousel-photo hero-carousel-photo img">
+        <img src="<%= heroImages[i] %>" alt="projects[i].projectTitle" class="carousel-photo hero-carousel-photo img">
       </div>
     </div>
     <!-- end of single frame -->
-    <!-- single frame -->
-    <div class="carousel-frame hero-carousel-frame">
-      <div class="hero-carousel-frame-image-container">
-        <img src="/images/samples/Mediterranean-C-V4-A4.png" alt="coconut water packaging sample" class="carousel-photo hero-carousel-photo img">
-      </div>
-    </div>
-    <!-- end of single frame -->
-    <!-- single frame -->
-    <div class="carousel-frame hero-carousel-frame">
-      <div class="hero-carousel-frame-image-container">
-        <img src="/images/samples/Isolano-V4-A2.png" alt="coconut water packaging sample" class="carousel-photo hero-carousel-photo img">
-      </div>
-    </div>
-    <!-- end of single frame -->
-    <!-- single frame -->
-    <div class="carousel-frame hero-carousel-frame">
-      <div class="hero-carousel-frame-image-container">
-        <img src="/images/samples/wildly-crafted-offshore-Gin-Palm-Trees-1700x1700.png" alt="coconut water packaging sample" class="carousel-photo hero-carousel-photo img">
-      </div>
-    </div>
-    <!-- end of single frame -->
-    <!-- single frame -->
-    <div class="carousel-frame hero-carousel-frame">
-      <div class="hero-carousel-frame-image-container">
-        <img src="/images/samples/Zalerance-Zenom.png" alt="coconut water packaging sample" class="carousel-photo hero-carousel-photo img">
-      </div>
-    </div>
-    <!-- end of single frame -->
-    <!-- single frame -->
-    <div class="carousel-frame hero-carousel-frame">
-      <div class="hero-carousel-frame-image-container">
-        <img src="/images/samples/Zalerance-Zenom.png" alt="coconut water packaging sample" class="carousel-photo hero-carousel-photo img">
-      </div>
-    </div>
-    <!-- end of single frame -->
+    <% } %>
   </div>
 </article>
+<style>
+  .hero-carousel-conveyor {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(<%= heroImages.length %>, auto);
+/*    don't know why we need this*/
+    transition: var(--transition);
+  }
+</style>
 <!-- end of conveyor -->

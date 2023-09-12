@@ -833,12 +833,12 @@ Project
   border-radius: 80px;
   z-index: 3;
 }
-.hero-carousel-conveyor {
+/*.hero-carousel-conveyor {
   position: absolute;
   display: grid;
   grid-template-columns: repeat(6, auto);
   transition: var(--transition);
-}
+}*/
 .hero-carousel-frame {
   top: 0px;
   width: 360px;
@@ -942,13 +942,10 @@ Project
   margin: 28px 0 0 76px;
   text-align: start;
 }
-.works-gallery {
-/*  margin: 28px 0 0 57px;*/
-  display: grid;
-  margin: 28px auto 0 auto;
-  grid-template-rows: repeat(6, auto);
-  row-gap: 30px;
-}
+/*specified in portfolioGallery view*/
+/*.works-gallery {
+
+}*/
 .work {
   width: 246px;
   margin: 0 auto;

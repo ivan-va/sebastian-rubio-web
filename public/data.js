@@ -15,9 +15,6 @@ const data = {
 				"heroImages": [
 					"/images/samples/Perkd-V1.png",
 					"/images/samples/Perkd-V1.png",
-					"/images/samples/Perkd-V1.png",
-					"/images/samples/Perkd-V1.png",
-					"/images/samples/Perkd-V1.png",
 					"/images/samples/Perkd-V1.png"
 					],
 			}

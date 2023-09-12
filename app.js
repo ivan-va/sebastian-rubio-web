@@ -42,32 +42,17 @@ app.use(xss())
 app.use(helmet())
 //
 
-function populatePortfolioSection(theData) {
-  const {portfolioItems} = theData
-  // console.log(portfolioItems[0].homePage.worksSectionImage)
-  let dynamicVarsObj = {}
-
-  // populate the object for the ejs dynamic vars
-  portfolioItems.map( (i, ndx) => {
-    const newNdx = ndx + 1
-
-    dynamicVarsObj[`workImage${newNdx}`] = i.homePage.worksSectionImage
-    dynamicVarsObj[`projectTitle${newNdx}`] = i.projectTitle
-    dynamicVarsObj[`projectYear${newNdx}`] = i.projectYear
-    dynamicVarsObj[`projectClient${newNdx}`] = i.projectClient
-    dynamicVarsObj[`projectDescription${newNdx}`] = i.projectDescription
-  })
-
-  return dynamicVarsObj
-}
-
 app.get(`/`, function(req, res) {
-  // // console.log(portfolioItems[0].homePage.worksSectionImage)
-  // other ejs dynamic vars could be appended for the final object,
-  // so it's concieved as let
-  let ejsVarsObj = populatePortfolioSection(data)
+  const {portfolioItems} = data
+  const heroImages = portfolioItems.map( i => i.homePage.heroImage)
 
-  res.status(200).render(`home`, ejsVarsObj)
+  res.status(200).render(
+    `home`,
+    {
+      projects: portfolioItems,
+      heroImages: heroImages,
+    }
+  )
 });
 
 app.post(`/send`, sendEmail, function(req, res) {
@@ -85,15 +70,26 @@ app.post(`/send`, sendEmail, function(req, res) {
 app.get(`/portfolio/:ndx`, function(req, res) {
   const {ndx} = req.params
   const {portfolioItems} = data
+  const project = portfolioItems[ndx]
 
-  let ejsVarsObj = populatePortfolioSection(data)
+  // TODO: put this into notes, so that I know how to create
+  // dynamic object property names.
+  // let ejsVarsObj = populatePortfolioSection(data)
+  // ejsVarsObj[`projectTitle`] = portfolioItems[ndx].projectTitle
+  // ejsVarsObj[`projectClient`] = portfolioItems[ndx].projectClient
+  // ejsVarsObj[`projectYear`] = portfolioItems[ndx].projectYear
+  // ejsVarsObj[`projectDescription`] = portfolioItems[ndx].projectDescription
 
-  ejsVarsObj[`projectTitle`] = portfolioItems[ndx].projectTitle
-  ejsVarsObj[`projectClient`] = portfolioItems[ndx].projectClient
-  ejsVarsObj[`projectYear`] = portfolioItems[ndx].projectYear
-  ejsVarsObj[`projectDescription`] = portfolioItems[ndx].projectDescription
+  const heroImages = project.ownPage.heroImages
 
-  res.render(`portfolioItem`, ejsVarsObj)
+  res.render(
+    `portfolioItem`, 
+    {
+      projects: portfolioItems, 
+      project: project, 
+      heroImages: heroImages
+    }
+  )
 })
 
 app.get(`/contact-empty`, function(req, res) {
