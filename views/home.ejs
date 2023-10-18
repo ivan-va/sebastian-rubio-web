@@ -27,7 +27,9 @@
     <section class="works-section section-center" id="works">
       <div class="works-center viewport-aware-centering">
         <p class="works-header font-header">Let the images speak for themselves</p>
+
         <%- include('partials/portfolioGallery') -%>
+
         <p class="works-text font-body-italic">
           Some are case studies, other ones are actual products, but here’s a selection of my best work up to date.
         </p>
@@ -48,79 +50,7 @@
     </section>
     <!-- end of reviews section -->
     <!-- services section -->
-    <section class="services-section section-center" id="services">
-      <div class="services-center viewport-aware-centering">
-        <p class="services-header font-header">Your business deserves great design</p>
-        <!-- all services -->
-        <div class="services-services">
-          <!-- single service -->
-          <article class="services-service">
-            <div class="service-header">
-              <p class="service-header-text font-services-header">Branding</p>
-            </div>
-            <div class="service-image-container">
-              <img src="images/samples/Agua-de-Valencia-V2-Chromatic-Aberration.png" alt="packaging sample" class="service-photo">
-            </div>
-            <div class="service-footer">
-              <p class="service-footer-text font-services-footer">
-                Starting from 299$
-              </p>
-            </div>
-          </article>
-          <!-- end of single service -->
-          <!-- single service -->
-          <article class="services-service">
-            <div class="service-header">
-              <p class="service-header-text font-services-header">Packaging</p>
-            </div>
-            <div class="service-image-container">
-              <img src="/images/samples/Agua-de-Valencia-V2-Chromatic-Aberration.png" alt="packaging sample" class="service-photo">
-            </div>
-            <div class="service-footer">
-              <p class="service-footer-text font-services-footer">
-                Starting from 299$
-              </p>
-            </div>
-          </article>
-          <!-- end of single service -->
-          <!-- single service -->
-          <article class="services-service">
-            <div class="service-header">
-              <p class="service-header-text font-services-header">Labels</p>
-            </div>
-            <div class="service-image-container">
-              <img src="/images/samples/Agua-de-Valencia-V2-Chromatic-Aberration.png" alt="packaging sample" class="service-photo">
-            </div>
-            <div class="service-footer">
-              <p class="service-footer-text font-services-footer">
-                Starting from 299$
-              </p>
-            </div>
-          </article>
-          <!-- end of single service -->
-          <!-- single service -->
-          <article class="services-service">
-            <div class="service-header">
-              <p class="service-header-text font-services-header">Illustration</p>
-            </div>
-            <div class="service-image-container">
-              <img src="/images/samples/Agua-de-Valencia-V2-Chromatic-Aberration.png" alt="packaging sample" class="service-photo">
-            </div>
-            <div class="service-footer">
-              <p class="service-footer-text font-services-footer">
-                Starting from 299$
-              </p>
-            </div>
-          </article>
-          <!-- end of single service -->
-        </div>
-        <!-- end of all services -->
-        <p class="services-text font-body-italic">
-          Logos, packaging & label design, illustrations and more. I have helped a bunch of businesses launch, grow, expand and rebrand with custom, professional design.
-        </p>
-        <a href="#" class="services-action link-bold">Get yours done</a>
-      </div>
-    </section>
+    <%- include('partials/services') -%>
     <!-- end of services section -->
     <!-- faq section -->
     <section class="faq-section section-center" id="faq">
@@ -128,118 +58,22 @@
         <p class="faq-header font-header">
           Here’s a list of the most common questions I get asked
         </p>
+        <% for(let i=0; i<faqItems.length; i++) { %>
         <!-- single faq question -->
         <div class="faq-question-container">
           <div class="faq-question-separator"></div>
           <div class="faq-question-header-container">
             <p class="faq-question-header font-body-norm">
-              How do I get started?
-            </p>
-            <p class="faq-question-header-symbol font-body-norm" name="faq-question-header-symbol"><i class="fa-solid fa-minus"></i></p>
-          </div>
-          <p class="faq-question-answer font-body-italic faq-question-answer-show" name="faq-question-answer">
-            Book a free consultation to discuss your design needs. If the prices and packages sound like a good fit, I’ll draft a  proposal for your specific project. Once the offer is approved, you’ll pay 50% upfront for the project using a simple and secure online payment method.
-          </p>
-        </div>
-        <!-- end of single faq question -->
-        <!-- single faq question -->
-        <div class="faq-question-container">
-          <div class="faq-question-separator"></div>
-          <div class="faq-question-header-container">
-            <p class="faq-question-header font-body-norm">
-              How do I get started?
+              <%= faqItems[i].question %>
             </p>
             <p class="faq-question-header-symbol font-body-norm" name="faq-question-header-symbol"><i class="fa-solid fa-plus"></i></p>
           </div>
-          <p class="faq-question-answer font-body-italic" name="faq-question-answer">
-            Book a free consultation to discuss your design needs. If the prices and packages sound like a good fit, I’ll draft a  proposal for your specific project. Once the offer is approved, you’ll pay 50% upfront for the project using a simple and secure online payment method.
+          <p class="faq-question-answer font-body-italic " name="faq-question-answer">
+            <%= faqItems[i].answer %>
           </p>
         </div>
         <!-- end of single faq question -->
-        <!-- single faq question -->
-        <div class="faq-question-container">
-          <div class="faq-question-separator"></div>
-          <div class="faq-question-header-container">
-            <p class="faq-question-header font-body-norm">
-              How do I get started?
-            </p>
-            <p class="faq-question-header-symbol font-body-norm" name="faq-question-header-symbol"><i class="fa-solid fa-plus"></i></p>
-          </div>
-          <p class="faq-question-answer font-body-italic" name="faq-question-answer">
-            Book a free consultation to discuss your design needs. If the prices and packages sound like a good fit, I’ll draft a  proposal for your specific project. Once the offer is approved, you’ll pay 50% upfront for the project using a simple and secure online payment method.
-          </p>
-        </div>
-        <!-- end of single faq question -->
-        <!-- single faq question -->
-        <div class="faq-question-container">
-          <div class="faq-question-separator"></div>
-          <div class="faq-question-header-container">
-            <p class="faq-question-header font-body-norm">
-              How do I get started?
-            </p>
-            <p class="faq-question-header-symbol font-body-norm" name="faq-question-header-symbol"><i class="fa-solid fa-plus"></i></p>
-          </div>
-          <p class="faq-question-answer font-body-italic" name="faq-question-answer">
-            Book a free consultation to discuss your design needs. If the prices and packages sound like a good fit, I’ll draft a  proposal for your specific project. Once the offer is approved, you’ll pay 50% upfront for the project using a simple and secure online payment method.
-          </p>
-        </div>
-        <!-- end of single faq question -->
-        <!-- single faq question -->
-        <div class="faq-question-container">
-          <div class="faq-question-separator"></div>
-          <div class="faq-question-header-container">
-            <p class="faq-question-header font-body-norm">
-              How do I get started?
-            </p>
-            <p class="faq-question-header-symbol font-body-norm" name="faq-question-header-symbol"><i class="fa-solid fa-plus"></i></p>
-          </div>
-          <p class="faq-question-answer font-body-italic" name="faq-question-answer">
-            Book a free consultation to discuss your design needs. If the prices and packages sound like a good fit, I’ll draft a  proposal for your specific project. Once the offer is approved, you’ll pay 50% upfront for the project using a simple and secure online payment method.
-          </p>
-        </div>
-        <!-- end of single faq question -->
-        <!-- single faq question -->
-        <div class="faq-question-container">
-          <div class="faq-question-separator"></div>
-          <div class="faq-question-header-container">
-            <p class="faq-question-header font-body-norm">
-              How do I get started?
-            </p>
-            <p class="faq-question-header-symbol font-body-norm" name="faq-question-header-symbol"><i class="fa-solid fa-plus"></i></p>
-          </div>
-          <p class="faq-question-answer font-body-italic" name="faq-question-answer">
-            Book a free consultation to discuss your design needs. If the prices and packages sound like a good fit, I’ll draft a  proposal for your specific project. Once the offer is approved, you’ll pay 50% upfront for the project using a simple and secure online payment method.
-          </p>
-        </div>
-        <!-- end of single faq question -->
-        <!-- single faq question -->
-        <div class="faq-question-container">
-          <div class="faq-question-separator"></div>
-          <div class="faq-question-header-container">
-            <p class="faq-question-header font-body-norm">
-              How do I get started?
-            </p>
-            <p class="faq-question-header-symbol font-body-norm" name="faq-question-header-symbol"><i class="fa-solid fa-plus"></i></p>
-          </div>
-          <p class="faq-question-answer font-body-italic" name="faq-question-answer">
-            Book a free consultation to discuss your design needs. If the prices and packages sound like a good fit, I’ll draft a  proposal for your specific project. Once the offer is approved, you’ll pay 50% upfront for the project using a simple and secure online payment method.
-          </p>
-        </div>
-        <!-- end of single faq question -->
-        <!-- single faq question -->
-        <div class="faq-question-container">
-          <div class="faq-question-separator"></div>
-          <div class="faq-question-header-container">
-            <p class="faq-question-header font-body-norm">
-              How do I get started?
-            </p>
-            <p class="faq-question-header-symbol font-body-norm" name="faq-question-header-symbol"><i class="fa-solid fa-plus"></i></p>
-          </div>
-          <p class="faq-question-answer font-body-italic" name="faq-question-answer">
-            Book a free consultation to discuss your design needs. If the prices and packages sound like a good fit, I’ll draft a  proposal for your specific project. Once the offer is approved, you’ll pay 50% upfront for the project using a simple and secure online payment method.
-          </p>
-        </div>
-        <!-- end of single faq question -->
+        <% } %>
         <div class="faq-separator"></div>
         <p class="faq-nav-text font-body-italic">
           Are you ready for the next step?

@@ -43,7 +43,13 @@ app.use(helmet())
 //
 
 app.get(`/`, function(req, res) {
-  const {portfolioItems} = data
+  const {
+    portfolioItems,
+    faqItems,
+    reviewItems,
+    servicesItems,
+  } = data
+
   const heroImages = portfolioItems.map( i => i.homePage.heroImage)
 
   res.status(200).render(
@@ -51,6 +57,9 @@ app.get(`/`, function(req, res) {
     {
       projects: portfolioItems,
       heroImages: heroImages,
+      faqItems: faqItems,
+      reviewItems: reviewItems,
+      servicesItems: servicesItems,
     }
   )
 });
@@ -69,16 +78,10 @@ app.post(`/send`, sendEmail, function(req, res) {
 
 app.get(`/portfolio/:ndx`, function(req, res) {
   const {ndx} = req.params
-  const {portfolioItems} = data
+  const {portfolioItems, reviewItems} = data
   const project = portfolioItems[ndx]
 
-  // TODO: put this into notes, so that I know how to create
-  // dynamic object property names.
-  // let ejsVarsObj = populatePortfolioSection(data)
-  // ejsVarsObj[`projectTitle`] = portfolioItems[ndx].projectTitle
-  // ejsVarsObj[`projectClient`] = portfolioItems[ndx].projectClient
-  // ejsVarsObj[`projectYear`] = portfolioItems[ndx].projectYear
-  // ejsVarsObj[`projectDescription`] = portfolioItems[ndx].projectDescription
+  // const workSectionImages = portfolioItems.map( i => i.worksSectionImage)
 
   const heroImages = project.ownPage.heroImages
 
@@ -87,7 +90,8 @@ app.get(`/portfolio/:ndx`, function(req, res) {
     {
       projects: portfolioItems, 
       project: project, 
-      heroImages: heroImages
+      heroImages: heroImages,
+      reviewItems: reviewItems,
     }
   )
 })
@@ -118,10 +122,10 @@ app.get(`/contact-email-error`, function(req, res) {
 
 // error handling middleware setup
 app.use(notFoundMiddleware)
-
+//
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 3001;
+  port = 3000;
 }
 
 app.listen(port, function() {

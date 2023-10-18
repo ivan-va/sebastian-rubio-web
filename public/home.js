@@ -49,6 +49,9 @@ faqQuestionHeaders.forEach( h => {
 	h.addEventListener(`click`, e => selectAnswer(e))
 })
 
+// TODO: complete this
+// faqQuestionHeaders[0]
+
 function selectAnswer(e) {
 	// get a specific node from the children collection by its name attribute
 	const symbol = e.target.closest(`.faq-question-header-container`).children.namedItem(`faq-question-header-symbol`)

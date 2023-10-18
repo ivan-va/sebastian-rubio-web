@@ -3,201 +3,48 @@
 </p>
 <!-- header stars container -->
 <div class="reviews-header-stars">
-  <!-- single header star -->
-  <div class="reviews-header-star-image-container">
-    <img src="/images/red-star.png" alt="star" class="red-star">
-  </div>
-  <!-- end of single header star -->
-  <!-- single header star -->
-  <div class="reviews-header-star-image-container">
-    <img src="/images/red-star.png" alt="star" class="red-star">
-  </div>
-  <!-- end of single header star -->
-  <!-- single header star -->
-  <div class="reviews-header-star-image-container">
-    <img src="/images/red-star.png" alt="star" class="red-star">
-  </div>
-  <!-- end of single header star -->
-  <!-- single header star -->
-  <div class="reviews-header-star-image-container">
-    <img src="/images/red-star.png" alt="star" class="red-star">
-  </div>
-  <!-- end of single header star -->
-  <!-- single header star -->
-  <div class="reviews-header-star-image-container">
-    <img src="/images/red-star.png" alt="star" class="red-star">
-  </div>
-  <!-- end of single header star -->
+  <% for(let i=0; i<5; i++) { %>
+    <!-- single header star -->
+    <div class="reviews-header-star-image-container">
+      <img src="/images/red-star.png" alt="star" class="red-star">
+    </div>
+    <!-- end of single header star -->
+  <% } %>
 </div>
 <!-- end of header stars container -->
 <p class="reviews-header-text font-body-italic">
   5.0 stars from 34 reviews
 </p>
 
+<% for(let i=0; i<reviewItems.length; i++) { %>
 <!-- single review -->
 <div class="reviews-review">
   <div class="review-separator"></div>
   <div class="review-header-container">
     <div class="review-image-container">
-      <img src="/images/face-1.png" alt="face" class="review-face">
+      <img src="<%= reviewItems[i].avatar %>" alt="face" class="review-face">
     </div>
     <div class="review-stars">
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
+      <% for(let i=0; i<5; i++) { %>
+        <!-- single review star -->
+        <div class="review-star-image-container">
+          <img src="/images/white-star.png" alt="star" class="review-white-star">
+        </div>
+        <!-- end of single review star -->
+      <% } %>
     </div>
   </div>
   <p class="review-text font-body-italic">
-    "Sebastian is a pleasure to work with. Incredible attention to detail. Very creative. Very responsible."
+    <!-- `-` instead of `=`. Otherwise, <br> won't be respected. -->
+    <%- reviewItems[i].text %>
   </p>
 </div>
 <!-- end of single review -->
-<!-- single review -->
-<div class="reviews-review">
-  <div class="review-separator"></div>
-  <div class="review-header-container">
-    <div class="review-image-container">
-      <img src="/images/face-2.png" alt="face" class="review-face">
-    </div>
-    <div class="review-stars">
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-    </div>
-  </div>
-  <p class="review-text font-body-italic">
-    “Always a pleasure working with Sebastian; he is a true professional serving the community to excellent standards. Thanks again for your help, and all the best yet to come, Gus K.”
-  </p>
-</div>
-<!-- end of single review -->
-<!-- single review -->
-<div class="reviews-review">
-  <div class="review-separator"></div>
-  <div class="review-header-container">
-    <div class="review-image-container">
-      <img src="/images/face-3.png" alt="face" class="review-face">
-    </div>
-    <div class="review-stars">
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-    </div>
-  </div>
-  <p class="review-text font-body-italic">
-    “Sebastian was a joy to work with and really understood our concept from day one. He was also incredibly quick and always willing to take on feedback. We have been through many designers over the years and truly Sebastian is up there with the best!”
-  </p>
-</div>
-<!-- end of single review -->
-<!-- single review -->
-<div class="reviews-review">
-  <div class="review-separator"></div>
-  <div class="review-header-container">
-    <div class="review-image-container">
-      <img src="/images/face-4.png" alt="face" class="review-face">
-    </div>
-    <div class="review-stars">
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-      <!-- single review star -->
-      <div class="review-star-image-container">
-        <img src="/images/white-star.png" alt="star" class="review-white-star">
-      </div>
-      <!-- end of single review star -->
-    </div>
-  </div>
-  <p class="review-text font-body-italic">
-    “Sebastian did an amazing work on my product labels, even when a major brief change implied changing all the files he had designed at the last minute. It’s been a pleasure to work with him and trust him with this project.”
-  </p>
-</div>
-<!-- end of single review -->
+<% } %>
 <div class="review-separator reviews-bottom-separator"></div>
-  <a href="#" class="reviews-read-more link-bold">
+<!--   <a href="#" class="reviews-read-more link-bold">
     Read More  <i class="fa-solid fa-arrow-right"></i>
-  </a>
+  </a> -->
   <p class="reviews-nav-text font-body-italic">Decided yet?</p>
   <button class="reviews-lets-talk-btn lets-talk-btn font-btn">Let's talk</button>
 </div>

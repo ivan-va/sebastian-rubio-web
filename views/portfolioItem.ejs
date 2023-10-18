@@ -3,18 +3,20 @@
 <body>
 	<section class="portfolio-item-hero-section section-center" id="portfolio-item-hero">
 		<div class="portfolio-item-hero-center viewport-aware-centering">
-			<%- include('partials/heroCarousel'); -%>
+			<%- include('partials/heroCarousel') -%>
 		</div>
 	</section>
 	<section class="portfolio-item-about-section section-center">
 		<div class="portfolio-item-about-center viewport-aware-centering">
 			<p class="portfolio-item-about-header font-body-norm">
 				Project: <%= project.projectTitle %><br>
+				Product name: <%= project.projectProductName %><br>
 				Client: <%= project.projectClient %><br>
-				Year: <%= project.projectYear %>
+				Year: <%= project.projectYear %><br>
+				Status: <%= project.projectStatus %>
 			</p>
 			<p class="portfolio-item-about-description font-body-italic">
-				<%= project.projectDescription %>
+				<%- project.projectDescription %>
 			</p>
 			<p class="portfolio-item-about-nav-text font-body-italic">Decided yet?</p>
 			<button class="portfolio-item-about-lets-talk-btn lets-talk-btn font-btn">Let's talk</button>

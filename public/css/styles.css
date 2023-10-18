@@ -956,6 +956,7 @@ Project
   position: relative;
   width: 100%;
   height: 170px;
+/*  height: 200px;*/
   border: 2px var(--accent-1) solid;
   border-radius: 13px;
   overflow: hidden;
@@ -965,6 +966,7 @@ Project
   /*here we only need height, so we get a peek at the image,
   if we use height too it will get stretched.*/
   width: 100%;
+/*  height: 100%;*/
   cursor: pointer;
 }
 .work-description-container {
@@ -1165,13 +1167,6 @@ Project
   width: 222px;
   text-align: center;
 }
-.services-services {
-  display: grid;
-  margin: 60px auto 0 auto;
-/*  grid-template-rows: auto auto auto;*/
-  grid-template-rows: repeat(4, auto);
-  row-gap: 32px;
-}
 .services-service {
   margin: 0 auto;
   width: 284px;
@@ -1179,7 +1174,7 @@ Project
   border-radius: 10px;
 }
 .service-header {
-  height: 45px;
+  height: 50px;
   border-bottom: 2px var(--accent-1) solid;
 }
 .service-header-text {
@@ -1190,17 +1185,20 @@ Project
   width: 100%;
   height: 120px;
   overflow: hidden;
+  border-bottom: 2px var(--accent-1) solid;
 }
 .service-photo {
   position: absolute;
   width: 100%;
 }
+.service-description {
+  padding: 15px;
+}
 .service-footer {
-  height: 45px;
+  height: 50px;
   border-top: 2px var(--accent-1) solid;
 }
 .service-footer-text {
-  margin-top: 9px;
   text-align: center;
 }
 .services-text {
@@ -1235,14 +1233,8 @@ Project
   .services-service {
     width: 316px;
   }
-  .service-header {
-    height: 50px;
-  }
   .service-image-container {
     height: 134px;
-  }
-  .service-footer {
-    height: 50px;
   }
   .services-text {
     margin: 60px auto 0 auto;

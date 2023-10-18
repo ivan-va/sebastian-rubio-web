@@ -1,0 +1,43 @@
+<section class="services-section section-center" id="services">
+  <div class="services-center viewport-aware-centering">
+    <p class="services-header font-header">Your business deserves great design</p>
+    <!-- all services -->
+    <div class="services-services">
+      <% for(let i=0; i<servicesItems.length; i++) { %>
+        <!-- single service -->
+        <article class="services-service">
+          <div class="service-header">
+            <p class="service-header-text font-services-header"><%= servicesItems[i].name %></p>
+          </div>
+          <div class="service-image-container">
+            <img src="<%= servicesItems[i].image %>" alt="<% servicesItems.name %>" class="service-photo">
+          </div>
+          <p class="service-description font-body-italic">
+            <%- servicesItems[i].description %>
+          </p>
+          <div class="service-footer">
+            <p class="service-footer-text font-services-header">
+              <%= servicesItems[i].price %>
+            </p>
+          </div>
+        </article>
+        <!-- end of single service -->
+      <% } %>
+    </div>
+    <!-- end of all services -->
+    <p class="services-text font-body-italic">
+      Logos, packaging & label design, illustrations and more. I have helped a bunch of businesses launch, grow, expand and rebrand with custom, professional design.<br><br>
+      Can't find what you're looking for? Ask me for a custom package tailored just for you.
+    </p>
+    <a href="#" class="services-action link-bold">Get yours done</a>
+  </div>
+</section>
+<style>
+  .services-services {
+    display: grid;
+    margin: 60px auto 0 auto;
+  /*  grid-template-rows: auto auto auto;*/
+    grid-template-rows: repeat(<%= servicesItems.length %>, auto);
+    row-gap: 32px;
+  }
+</style>
