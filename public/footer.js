@@ -1,4 +1,4 @@
-const date = document.querySelector(`#date`);
+const date = document.querySelector(`#date`)
 const msgTextArea = document.querySelector(`.form-textarea`)
 
 // set year

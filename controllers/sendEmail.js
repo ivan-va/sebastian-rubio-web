@@ -1,5 +1,5 @@
-import nodemailer from 'nodemailer'
-import {MailgunTransport} from 'mailgun-nodemailer-transport'
+const nodemailer = require('nodemailer')
+const {MailgunTransport} = require('mailgun-nodemailer-transport')
 
 // we are using Mailgun to send the email from the contact form
 async function sendEmail(req, res, next) {
@@ -54,4 +54,5 @@ async function sendEmail(req, res, next) {
 	})
 }
 
-export default sendEmail
+module.exports = sendEmail
+// export default sendEmail

@@ -68,7 +68,7 @@ const data = {
 			"projectClient": "Bodegas Antonio Llobell SRL + Parenthesis Spirits",
 			"projectYear": "2023",
 			"projectDescription": "The task was to create a cheerful and fun label for this traditional Spanish cocktail, Agua de Valencia, which main ingredients are white spirits and orange juice, so I crafted custom icons representing the orange blossoms, fruits and drinks made with them. I used hand drawn fonts to convey the spirit of different local sayings (and voices) from Valencia, Spain.<br>Since the drink itself is orange color, I chose a color palette to complement and highlight it.<br> The label is silkscreen printed in three colors on the bottle.",
-			"worksSectionImage": "/images/portfolio/Agua-de-Valencia-01.png",
+			"worksSectionImage": "/images/portfolio/Agua-de-Valencia-02.png",
 			"homePage": {
 				"heroImage": "/images/portfolio/Agua-de-Valencia-01.png",
 			},
@@ -107,7 +107,7 @@ const data = {
 			"projectClient": "Stankovic",
 			"projectYear": "2022",
 			"projectDescription": "The requested theme for this product was Mid Century, Bauhaus inspired influence for this naturally crafted brandy distilled from apricots. I created bold graphics and clear descriptions for this label. This can be easily adapted to extend the product line.",
-			"worksSectionImage": "/images/portfolio/Kika-02.png",
+			"worksSectionImage": "/images/portfolio/Kika-03.png",
 			"homePage": {
 				"heroImage": "/images/portfolio/Kika-01.png",
 			},
@@ -212,4 +212,5 @@ const data = {
 	],
 }
 
-export default data
+module.exports = data
+// export default data

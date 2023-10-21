@@ -1,27 +1,27 @@
-import 'dotenv/config'
-import path from 'path'
-import url from 'url'
-import express from 'express'
-import ejs from 'ejs'
-import mongoose from 'mongoose'
+require('dotenv').config()
+const path = require('path')
+const url = require('url')
+const express = require('express')
+const ejs = require('ejs')
+const mongoose = require('mongoose')
 // security packages
-import helmet from 'helmet'
-// import cors from 'cors'
-import xss from 'xss-clean'
-import rateLimiter from 'express-rate-limit'
+const helmet = require('helmet')
+// const cors = require('cors')
+const xss = require('xss-clean')
+const rateLimiter = require('express-rate-limit')
 //
-import sendEmail from './controllers/sendEmail.js'
-import data from './public/data.js'
+const sendEmail = require('./controllers/sendEmail.js')
+const data = require('./public/data.js')
 // middleware
-import notFoundMiddleware from './middleware/notFound.js'
+const notFoundMiddleware = require('./middleware/notFound.js')
 
 const app = express()
 
 app.set(`view engine`, `ejs`)
 
 // create __filename and __dirname that we lack bc we use ES6 modules
-const __filename = url.fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = url.fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 // console.log(`Filename: ${__filename}`);
 // console.log(`Dirname: ${__dirname}`);
 //

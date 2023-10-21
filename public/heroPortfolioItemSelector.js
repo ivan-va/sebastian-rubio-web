@@ -1,5 +1,3 @@
-import data from './data.js'
-
 async function heroPortfolioItemSelector() {
 	const photos = document.querySelectorAll(`.hero-carousel-photo`)
 	const path = window.location.pathname
@@ -13,6 +11,7 @@ async function heroPortfolioItemSelector() {
 			})
 		})
 	}
+	//
 	// if we're on a portfolio item page, show the portfolio item photos
 	// if (path.startsWith(`/portfolio/`)) {
 	// 	// get the index of the page from the url, cutting out the
