@@ -6,6 +6,7 @@ import ejs from 'ejs'
 import mongoose from 'mongoose'
 // security packages
 import helmet from 'helmet'
+// import cors from 'cors'
 import xss from 'xss-clean'
 import rateLimiter from 'express-rate-limit'
 //
@@ -34,12 +35,12 @@ app.use(express.json())
 app.use(
   rateLimiter({
     windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 20, // limit each IP to 100 requests per windowMs
+    max: 50, // limit each IP to 100 requests per windowMs
   })
 )
 app.use(helmet())
 app.use(xss())
-app.use(helmet())
+// app.use(cors())
 //
 
 app.get(`/`, function(req, res) {

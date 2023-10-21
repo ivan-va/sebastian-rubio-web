@@ -681,7 +681,10 @@ Project
     scroll-margin-top: 121px;
   }
   #footer-contact:target {
-    scroll-margin-top: 121px;
+/*the normal value*/
+/*    scroll-margin-top: 121px;*/
+/*modified value to make the `send` button more visible on scroll*/
+    scroll-margin-top: 80px;
   }
 }
 
@@ -1401,6 +1404,9 @@ Project
   font-size: 30px;
   color: var(--accent-1);
   cursor: pointer;
+}
+.footer-social-icon{
+  color: var(--accent-1);
 }
 .footer-social-icon:hover {
   color: var(--secondary-500);
