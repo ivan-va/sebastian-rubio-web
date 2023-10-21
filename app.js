@@ -6,7 +6,7 @@ const ejs = require('ejs')
 const mongoose = require('mongoose')
 // security packages
 const helmet = require('helmet')
-// const cors = require('cors')
+const cors = require('cors')
 const xss = require('xss-clean')
 const rateLimiter = require('express-rate-limit')
 //
@@ -40,7 +40,7 @@ app.use(
 )
 app.use(helmet())
 app.use(xss())
-// app.use(cors())
+app.use(cors())
 //
 
 app.get(`/`, function(req, res) {
