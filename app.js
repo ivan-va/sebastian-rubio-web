@@ -56,6 +56,7 @@ app.get(`/`, function(req, res) {
   res.status(200).render(
     `home`,
     {
+      showHeroText: true,
       projects: portfolioItems,
       heroImages: heroImages,
       faqItems: faqItems,
@@ -82,13 +83,12 @@ app.get(`/portfolio/:ndx`, function(req, res) {
   const {portfolioItems, reviewItems} = data
   const project = portfolioItems[ndx]
 
-  // const workSectionImages = portfolioItems.map( i => i.worksSectionImage)
-
   const heroImages = project.ownPage.heroImages
 
   res.render(
     `portfolioItem`, 
     {
+      showHeroText: false,
       projects: portfolioItems, 
       project: project, 
       heroImages: heroImages,

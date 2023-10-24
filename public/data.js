@@ -126,7 +126,7 @@ const data = {
 			"answer": "Book a free consultation to discuss your design needs. If the prices and packages sound like a good fit, I’ll draft up a proposal for your specific project. Once the offer is approved, you'll pay 50% upfront for the project using a simple and secure online payment method.",
 		},
 		{
-			"question": "How does it works?",
+			"question": "How does it work?",
 			"answer": "In order to make everything go smoothly, my design process is sequential. We’ll do the work in stages – briefing, conceptualisation, sketch, revisions and final design so when one stage is approved, we don’t need to turn back. Revisions will be necessary, usually up to three in order to achieve your goal. You can book more revisions for a fee.",
 		},
 		{
@@ -135,7 +135,7 @@ const data = {
 		},
 		{
 			"question": "How can I pay you?",
-			"answer": "I accept secure payment methods such as PayPal or Payoneer, but also stablecoins such as USDT.",
+			"answer": "I accept secure payment methods with credit cards through Payoneer, Paypal, and crypto stablecoins such as USDT.",
 		},
 		{
 			"question": "Who owns the copyright?",

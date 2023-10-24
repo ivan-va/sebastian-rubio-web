@@ -65,4 +65,3 @@ function selectAnswer(e) {
 		symbol.innerHTML = `<i class="fa-solid fa-minus"></i>`
 	}
 }
-

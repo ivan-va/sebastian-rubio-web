@@ -9,19 +9,7 @@
     </section>
     <!-- end of hero -->
     <!-- about -->
-    <section class="about-section section-center" id="about">
-      <div class="about-center viewport-aware-centering">
-        <p class="about-text font-body">
-          I’m a Graphic Designer with more than 12 years’ experience, based in Buenos Aires, Argentina.<br><br>
-          I‘m a specialist in Packaging and Label design, although I’m experienced in branding identity & digital illustration and I often combine them together to create unique products that look good and sell.
-        </p>
-        <p class="about-nav-text font-body-italic">
-          Have some questions?
-        </p>
-        <button class="about-lets-talk-btn lets-talk-btn font-btn">Let's talk</button>
-        <a href="/#works" class="about-view-work link-bold">View Work  <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-    </section>
+      <%- include('partials/about') -%>
     <!-- end of about -->
     <!-- works section -->
     <section class="works-section section-center" id="works">
@@ -84,6 +72,6 @@
     <!-- end of faq section -->
   </body>
   <script type="module" src="../home.js"></script>
-  <!-- <script src="../home.js"></script> -->
-
+  <script type="module" src="../resizeAboutPhoto.js"></script>
+  
   <%- include('partials/footer'); -%>

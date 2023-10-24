@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer')
 const {MailgunTransport} = require('mailgun-nodemailer-transport')
+// import {MailgunTransport} from 'mailgun-nodemailer-transport'
 
 // we are using Mailgun to send the email from the contact form
 async function sendEmail(req, res, next) {
@@ -21,13 +22,13 @@ async function sendEmail(req, res, next) {
 		|| formMessage === ``
 		|| formMessage === `Your message`
 	) {
-		console.log(`Error: Please, fill out all the fields`)
+		console.error(`Error: Please, fill out all the fields`)
 		// res.status(400).json({msg: `Please, fill out all the fields`})
 		res.redirect(`/contact-empty`)
 		return
 	}
 	if (!validateEmail(formEmail)) {
-		console.log(`Error: Invalid email`)
+		console.error(`Error: Invalid email`)
 		// res.status(400).json({msg: `Invalid email`})
 		res.redirect(`/contact-email-error`)
 		return
@@ -49,8 +50,8 @@ async function sendEmail(req, res, next) {
 		console.log(`SUCCESS`)
 		next()
 	}).catch((err) => {
-		console.log(`Something went wrong`, err)
-		res.status(404).json({msg: `Something went wrong`})
+		console.error(`Something went wrong. Cause: `, err)
+		res.status(404).json({msg: `Something went wrong`, cause: `${err}`})
 	})
 }
 
